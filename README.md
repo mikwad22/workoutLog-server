@@ -6,3 +6,4 @@ Get all logs for an individual user: GET <img width="1139" alt="Screen Shot 2020
 Get all logs for an individual user by id: GET <img width="1140" alt="Screen Shot 2020-05-25 at 3 08 19 PM" src="https://user-images.githubusercontent.com/63356287/82839345-0dfd9c80-9e9d-11ea-9f33-6994873851a2.png">
 Allows individual logs to be updated by a user: PUT <img width="1138" alt="Screen Shot 2020-05-25 at 3 58 05 PM" src="https://user-images.githubusercontent.com/63356287/82840492-cb3dc380-9ea0-11ea-9407-2237ca763ebf.png">
 <img width="1261" alt="Screen Shot 2020-05-25 at 3 57 23 PM" src="https://user-images.githubusercontent.com/63356287/82840440-9e89ac00-9ea0-11ea-9584-feee3efd569d.png">
+Allows individual logs to be deleted by a user: DELETE <img width="1139" alt="Screen Shot 2020-05-25 at 3 27 34 PM" src="https://user-images.githubusercontent.com/63356287/82840584-21126b80-9ea1-11ea-8602-b32056172bc2.png">
