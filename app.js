@@ -21,6 +21,6 @@ app.use(require('./middleware/headers'));
 app.listen(process.env.PORT, () => console.log(`app is listening on ${process.env.PORT}`));
 
 // routes
-app.use('/auth', user);
+app.use('/api', user);
 app.use(require('./middleware/validate-session'));
-app.use('/log', log);
+app.use('/api', log);

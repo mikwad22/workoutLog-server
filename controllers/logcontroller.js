@@ -1,19 +1,8 @@
 const router = require('express').Router()
 const Log = require('../db').import('../models/log');
 
-// GET - ALL LOGS FOR USERS
-router.get('/', (req, res) => {
-    Log.findAll()
-    .then(log => res.status(200).json({
-        log: log
-    }))
-    .catch(err => res.status(500).json({
-        error: err
-    }))
-});
-
 // POST - CREATE WORKOUT LOG
-router.post('/', (req, res) => {
+router.post('/log', (req, res) => {
     const logFromRequest = {
         description: req.body.description,
         definition: req.body.definition,
@@ -30,8 +19,20 @@ router.post('/', (req, res) => {
     }))
 })
 
+// GET - ALL LOGS FOR USERS
+router.get('/log', (req, res) => {
+    Log.findAll()
+    .then(log => res.status(200).json({
+        log: log
+    }))
+    .catch(err => res.status(500).json({
+        error: err
+    }))
+});
+
+
 // GET: ID FOR USER
-router.get('/:id', (req, res) => {
+router.get('/log/:id', (req, res) => {
     Log.findOne({
         where: {
             id: req.params.id
@@ -46,7 +47,7 @@ router.get('/:id', (req, res) => {
 })
 
 // UPDATE USER: PUT METHOD
-router.put('/:id', (req, res) => {
+router.put('/log/:id', (req, res) => {
     Log.update(req.body, {
         where: {
             id: req.params.id
@@ -61,7 +62,7 @@ router.put('/:id', (req, res) => {
 })
 
 // DELETE log
-router.delete('/:id', (req, res) => {
+router.delete('/log/:id', (req, res) => {
     Log.destroy({
         where: {
             id: req.params.id
